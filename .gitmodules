@@ -1,0 +1,9 @@
+[submodule "Web"]
+	path = Web
+	url = https://github.com/Cobaltians-Plugins/Plugins-FCM-Web.git
+[submodule "iOS"]
+	path = iOS
+	url = https://github.com/Cobaltians-Plugins/Plugins-FCM-iOS.git
+[submodule "Android"]
+	path = Android
+	url = https://github.com/Cobaltians-Plugins/Plugins-FCM-Android.git
