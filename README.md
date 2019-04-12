@@ -1,6 +1,5 @@
 # FCM 
-FCM Plugin allows you to manage your notifications with the Google's service Firebase Cloud Messaging. To run this plugin with the Build Kristal server, you'll need to use the AppInfos plugin to get the device ID.
-You'll also need to get the application's API key.
+FCM Plugin allows you to manage your notifications with the Google's service Firebase Cloud Messaging. 
 
 # How to use
 * Import the plugin to your project as explain [here](https://github.com/cobaltians/cobalt/wiki/Plugins-usage)
@@ -74,20 +73,6 @@ You don't need to manage the connection/disconnection with Android. However, you
     
 To avoid errors, you have to manage all your FCM actions inside of the getToken's callback. In doing this, you're sure that you'll not call an FCM action before your token was generated.
 
-# Register a token on the server
-
-	cobalt.fcm.tokenRegister(donnees, function(data){
-		// data contains the server response
-        cobalt.log("Saving the token : ", data.message);
-    });
-    
-# Get the list of topics for an uid
-
-	cobalt.fcm.getTopics(donnees, function(data){
-		// data contains an array of topics
-        cobalt.log("Recovery of topics = ", data);
-    });
-
 # Topic's subscription/unsubscription
 
 	// To subscribe to a topic
@@ -100,24 +85,6 @@ To avoid errors, you have to manage all your FCM actions inside of the getToken'
 		cobalt.log("Unsubscription from topic nameTopic");
 	});
 	
-# Save a topic on the server
-If you have to save your topics name on the server, you can call the saveTopic function like this: 
-
-	cobalt.fcm.saveTopic(donnees, function(data){
-		cobalt.log("Saving topic...", data);
-	);
-
-
-# Sending a notification
-
-	cobalt.fcm.sendNotification(donnees, function(data){
-		// data contains the server response
-        cobalt.log("Envoi de notif... ", data);
-    });
-
-## Details of data to send
-You can have the details of data to send to each action [here](https://sites.google.com/site/kristalwiki/services/builds-kristal-io/pushapi)
-
 Repositories: 
 
 * [Plugins-FCM-iOS](https://github.com/Cobaltians-Plugins/Plugins-FCM-iOS)
